@@ -1,0 +1,116 @@
+﻿<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Zirve Bina Yönetimi</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@500;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Bootstrap 5 CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    
+    <!-- Icons (Bootstrap Icons) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-custom fixed-top">
+            <div class="container">
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">
+                    <!-- Logo Text (Will be replaced by Image if available) -->
+                    ZİRVE <span class="text-gold">YÖNETİM</span>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon" style="filter: invert(1);"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" asp-controller="Home" asp-action="Index">Ana Sayfa</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" asp-controller="Home" asp-action="About">Kurumsal</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" asp-controller="Home" asp-action="Services">Hizmetlerimiz</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" asp-controller="Home" asp-action="Projects">Referanslar</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" asp-controller="Home" asp-action="Contact">İletişim</a>
+                        </li>
+                    </ul>
+                    <div class="d-flex ms-lg-3">
+                        <a href="#offer-form" class="btn btn-primary-custom rounded-pill">Hemen Teklif Al</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main role="main" class="pb-3" style="margin-top: 80px;">
+        @RenderBody()
+    </main>
+
+    <footer class="footer-custom">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-4">
+                    <h5 class="mb-4">Zirve Bina Yönetimi</h5>
+                    <p>
+                        Profesyonel apartman, site ve tesis yönetimi hizmetlerimizle
+                        yaşam alanlarınızın değerini artırıyoruz.
+                        Güven, şeffaflık ve kalite ilkemizdir.
+                    </p>
+                    <div class="d-flex gap-3 mt-4">
+                        <a href="#" class="fs-4"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="fs-4"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="fs-4"><i class="bi bi-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <h5>Hızlı Bağlantılar</h5>
+                    <ul class="list-unstyled d-flex flex-column gap-2">
+                        <li><a href="/Home/Index">Ana Sayfa</a></li>
+                        <li><a href="/Home/About">Hakkımızda</a></li>
+                        <li><a href="/Home/Services">Hizmetler</a></li>
+                        <li><a href="/Home/Contact">İletişim</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5>Hizmetlerimiz</h5>
+                    <ul class="list-unstyled d-flex flex-column gap-2">
+                        <li><a href="#">Site Yönetimi</a></li>
+                        <li><a href="#">Temizlik Hizmetleri</a></li>
+                        <li><a href="#">Güvenlik Danışmanlığı</a></li>
+                        <li><a href="#">Teknik Bakım</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3">
+                    <h5>İletişim</h5>
+                    <ul class="list-unstyled d-flex flex-column gap-2">
+                        <li><i class="bi bi-geo-alt-fill text-gold me-2"></i> İstanbul, Türkiye</li>
+                        <li><i class="bi bi-telephone-fill text-gold me-2"></i> +90 (555) 000 00 00</li>
+                        <li><i class="bi bi-envelope-fill text-gold me-2"></i> info@zirveyonetim.com.tr</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-top border-secondary mt-5 pt-4 text-center">
+                <small>&copy; @DateTime.Now.Year Zirve Bina Yönetimi. Tüm Hakları Saklıdır.</small>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
