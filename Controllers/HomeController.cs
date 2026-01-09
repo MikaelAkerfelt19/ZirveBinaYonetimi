@@ -34,7 +34,10 @@ public class HomeController : Controller
     {
         return View();
     }
-
+    public IActionResult GetQuote()
+    {
+        return View();
+    }
     public IActionResult Contact()
     {
         return View();
