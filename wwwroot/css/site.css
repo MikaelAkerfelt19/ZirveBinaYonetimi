@@ -1,173 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
 :root {
-  --zirve-red: #C00000;
-  --zirve-gold: #D4AF37;
-  --zirve-dark: #1E293B;
-  --zirve-light: #F8FAFC;
-  --zirve-text: #334155;
-  --font-heading: 'Outfit', sans-serif;
-  --font-body: 'Inter', sans-serif;
+    --primary-red: #D90429;
+    --primary-red-glow: rgba(217, 4, 41, 0.5);
+    --bg-dark: #050507;
+    --bg-card: #0f0f13;
+    --text-main: #ffffff;
+    --text-muted: #b0b0b0; 
+    --border-color: #1f1f26;
+    --ease-smooth: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-  font-family: var(--font-body);
-  color: var(--zirve-text);
-  background-color: #fff;
+    background-color: var(--bg-dark);
+    color: var(--text-main);
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 1rem;
+    overflow-x: hidden;
+    background-image: linear-gradient(var(--border-color) 1px, transparent 1px), linear-gradient(90deg, var(--border-color) 1px, transparent 1px);
+    background-size: 50px 50px;
+    background-position: center top;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-heading);
-  color: var(--zirve-dark);
-  font-weight: 700;
+.navbar {
+    background-color: rgba(5, 5, 7, 0.95) !important;
+    backdrop-filter: blur(12px); 
+    border-bottom: 1px solid var(--border-color);
+    height: 100px;
+    padding: 0 !important;
+    z-index: 9999;
 }
 
-/* Custom Colors & Buttons */
-.text-primary-custom { color: var(--zirve-red) !important; }
-.text-secondary-custom { color: var(--zirve-gold) !important; }
-.bg-dark-custom { background-color: var(--zirve-dark) !important; }
-.bg-light-custom { background-color: var(--zirve-light) !important; }
+    .navbar .container {
+        height: 100%;
+        display: flex;
+        align-items: center;
+    }
 
-.btn-primary-custom {
-  background-color: var(--zirve-red);
-  border-color: var(--zirve-red);
-  color: #fff;
-  padding: 0.75rem 1.5rem;
-  font-weight: 600;
-  transition: all 0.3s ease;
+/* --- LOGO AYARLARI --- */
+.navbar-brand {
+    height: 100%;
+    padding: 6px 0;
+    margin-right: 60px; 
+    display: flex;
+    align-items: center;
 }
 
-.btn-primary-custom:hover {
-  background-color: #a00000;
-  border-color: #a00000;
-  color: #fff;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 6px -1px rgba(192, 0, 0, 0.3);
+.nav-logo {
+    height: 100%;
+    width: auto;
+    display: block;
+    object-fit: contain;
+    filter: drop-shadow(0 0 5px rgba(255,255,255,0.1));
 }
 
-.btn-outline-custom {
-  color: var(--zirve-dark);
-  border: 2px solid var(--zirve-dark);
-  padding: 0.75rem 1.5rem;
-  font-weight: 600;
-  transition: all 0.3s ease;
+/* --- MENÜ LÝNKLERÝ (Lezzetli/Modern Stil) --- */
+.nav-link {
+    color: #a0a0a0 !important; 
+    font-weight: 600; 
+    font-size: 0.95rem;
+    letter-spacing: 0.3px; 
+    transition: all 0.3s ease;
+    padding: 0 10px; 
 }
 
-.btn-outline-custom:hover {
-  background-color: var(--zirve-dark);
-  color: #fff;
+    .nav-link:hover, .nav-link.active {
+        color: #ffffff !important; 
+        transform: translateY(-1px); 
+    }
+
+/* --- Loader (Açýlýþ Ekraný) --- */
+.page-loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #050507;
+    z-index: 99999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-/* Navbar */
-.navbar-custom {
-  background-color: var(--zirve-dark);
-  padding: 1.5rem 0;
+.logo-loader {
+    border-radius: 8px !important;
+    object-fit: contain !important;
+    width: 220px; 
+    height: auto;
 }
 
-.navbar-custom .navbar-brand {
-  color: #fff;
-  font-family: var(--font-heading);
-  font-weight: 800;
-  font-size: 1.5rem;
-}
-
-.navbar-custom .nav-link {
-  color: rgba(255,255,255,0.8);
-  font-weight: 500;
-  margin-left: 1rem;
-  transition: color 0.2s;
-}
-
-.navbar-custom .nav-link:hover,
-.navbar-custom .nav-link.active {
-  color: var(--zirve-gold);
-}
-
-/* Hero Section */
+/* --- Hero Section --- */
 .hero-section {
-  background-color: var(--zirve-light);
-  padding: 8rem 0 6rem;
-  position: relative;
-  overflow: hidden;
+    position: relative;
+    padding: 165px 0 100px 0;
+    overflow: hidden;
 }
 
-.hero-title {
-  font-size: 3.5rem;
-  line-height: 1.2;
-  margin-bottom: 1.5rem;
-  color: var(--zirve-dark);
+/* Baþlýk Düzenlemeleri */
+.display-1 {
+    font-weight: 800;
+    font-size: 3.8rem; 
+    line-height: 1.15;
+    letter-spacing: -1.5px; 
+    margin-bottom: 1.5rem;
 }
 
-.hero-subtitle {
-  font-size: 1.25rem;
-  color: var(--zirve-text);
-  margin-bottom: 2rem;
-  font-weight: 400;
+/* Vurgulu Kelime */
+.highlight-red {
+    color: var(--primary-red);
+    position: relative;
+    display: inline-block;
 }
 
-/* Features / Cards */
-.feature-card {
-  background: #fff;
-  border: 1px solid rgba(0,0,0,0.05);
-  border-radius: 12px;
-  padding: 2.5rem;
-  transition: all 0.3s ease;
-  height: 100%;
+    .highlight-red::after {
+        content: '';
+        position: absolute;
+        bottom: 5px;
+        left: 0;
+        width: 100%;
+        height: 8px;
+        background: var(--primary-red);
+        opacity: 0.3;
+        z-index: -1;
+    }
+
+.glass-panel {
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.08); 
+    border-radius: 24px;
+    padding: 2rem;
+    position: relative;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.5);
 }
 
-.feature-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-  border-color: var(--zirve-gold);
+.glow-effect {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background: var(--primary-red);
+    filter: blur(120px);
+    opacity: 0.2;
+    border-radius: 50%;
+    z-index: -1;
 }
 
-.feature-icon {
-  font-size: 2.5rem;
-  color: var(--zirve-red);
-  margin-bottom: 1.5rem;
+
+.btn-premium {
+    background: var(--primary-red);
+    color: #fff;
+    padding: 14px 35px;
+    border-radius: 12px; 
+    font-weight: 600;
+    text-decoration: none;
+    transition: transform 0.2s, box-shadow 0.2s;
+    border: 1px solid var(--primary-red);
+    display: inline-block;
 }
 
-/* Sections */
-.section-padding {
-  padding: 6rem 0;
+    .btn-premium:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 10px 30px rgba(217, 4, 41, 0.4); 
+        color: #fff;
+    }
+
+.btn-outline-premium {
+    background: transparent;
+    color: #fff;
+    border: 1px solid rgba(255,255,255,0.2);
+    padding: 14px 35px;
+    border-radius: 8px; 
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-block;
 }
 
-.section-title {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-  position: relative;
-  display: inline-block;
+    .btn-outline-premium:hover {
+        border-color: #fff;
+        background: rgba(255,255,255,0.05);
+    }
+
+/* Ýstatistik Kartlarý */
+.stat-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
 }
 
-.section-title::after {
-  content: '';
-  display: block;
-  width: 60px;
-  height: 4px;
-  background-color: var(--zirve-red);
-  margin-top: 0.5rem;
+.stat-icon {
+    width: 50px;
+    height: 50px;
+    background: rgba(217, 4, 41, 0.1);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary-red);
+    font-size: 1.2rem;
 }
-
-/* Footer */
-.footer-custom {
-  background-color: var(--zirve-dark);
-  color: rgba(255,255,255,0.7);
-  padding: 5rem 0 2rem;
-}
-
-.footer-custom h5 {
-  color: #fff;
-  margin-bottom: 1.5rem;
-}
-
-.footer-custom a {
-  color: rgba(255,255,255,0.7);
-  text-decoration: none;
-  transition: color 0.2s;
-}
-
-.footer-custom a:hover {
-  color: var(--zirve-gold);
-}
-
-/* Utilities */
-.text-gold { color: var(--zirve-gold); }
-.border-gold { border-color: var(--zirve-gold) !important; }
