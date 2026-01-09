@@ -22,6 +22,23 @@ public class HomeController : Controller
     {
         return View();
     }
+    public IActionResult Corporate()
+    {
+        return View();
+    }
+    public IActionResult Process()
+    {
+        return View();
+    }
+    public IActionResult References()
+    {
+        return View();
+    }
+
+    public IActionResult Contact()
+    {
+        return View();
+    }
     public IActionResult Services()
     {
         return View();

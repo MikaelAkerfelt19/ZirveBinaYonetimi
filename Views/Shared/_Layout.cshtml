@@ -30,12 +30,24 @@
                         <li class="nav-item">
                             <a class="nav-link" asp-controller="Home" asp-action="Services">Hizmetler</a>
                         </li>
-                        <li class="nav-item"><a class="nav-link" href="#">Kurumsal</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">İletişim</a></li>
+                        <li class="nav-item">
+                            <a class="nav-link" asp-controller="Home" asp-action="Corporate">Kurumsal</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" asp-controller="Home" asp-action="Process">Yönetim Süreci</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" asp-controller="Home" asp-action="References">Referanslar</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" asp-controller="Home" asp-action="Contact">İletişim</a>
+                        </li>
+                        <li class="nav-item ms-3">
+                            <a asp-controller="Home" asp-action="GetQuote" class="btn-premium py-2 px-4" style="font-size: 0.9rem;">
+                                Teklif Al
+                            </a>
+                        </li>
                     </ul>
-                    <div class="ms-4">
-                        <a href="#" class="btn-premium">Giriş Yap</a>
-                    </div>
                 </div>
             </div>
         </nav>
