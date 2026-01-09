@@ -714,3 +714,111 @@ textarea.form-control-premium {
     -webkit-text-fill-color: transparent;
     font-weight: 800; /* Kalýn olsun ki renk belli olsun */
 }
+/* --- FOOTER (Zirve Premium Compact) --- */
+.site-footer {
+    background-color: var(--bg-card);
+    border-top: 1px solid var(--border-color);
+    /* Yükseklik ayarý: 80px'den 50px'e çektik */
+    padding-top: 50px;
+    margin-top: auto;
+    position: relative;
+    z-index: 10;
+    /* Genel font boyutunu küçülttük */
+    font-size: 0.9rem;
+}
+
+.footer-heading {
+    color: #fff;
+    font-weight: 700;
+    font-size: 1rem; /* Baþlýklar artýk devasa deðil */
+    margin-bottom: 1rem; /* Baþlýk altý boþluk azaldý */
+    letter-spacing: -0.3px;
+}
+
+/* Link Listesi */
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+    .footer-links li {
+        margin-bottom: 8px; /* Satýr aralarýný sýkýlaþtýrdýk (12px -> 8px) */
+    }
+
+    .footer-links a {
+        color: var(--text-muted);
+        text-decoration: none;
+        font-size: 0.9rem;
+        font-weight: 500;
+        transition: all 0.3s var(--ease-smooth);
+        display: inline-block;
+    }
+
+        .footer-links a:hover {
+            color: var(--primary-red);
+            transform: translateX(3px);
+            text-shadow: 0 0 10px rgba(217, 4, 41, 0.4);
+        }
+
+/* Ýletiþim Bilgileri */
+.footer-contact {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+    .footer-contact li {
+        display: flex;
+        align-items: flex-start;
+        gap: 10px;
+        margin-bottom: 0.8rem; /* Ýletiþim satýrlarý birbirine yaklaþtý */
+        color: var(--text-muted);
+        font-size: 0.9rem;
+        line-height: 1.5;
+    }
+
+    .footer-contact i {
+        color: var(--primary-red);
+        font-size: 1rem;
+        margin-top: 3px;
+        flex-shrink: 0;
+    }
+
+/* Sosyal Medya Ýkonlarý (Daha Zarif) */
+.social-icon {
+    width: 36px; /* 45px yerine 36px */
+    height: 36px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-muted);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-size: 0.95rem;
+}
+
+    .social-icon:hover {
+        background: var(--primary-red);
+        border-color: var(--primary-red);
+        color: #fff;
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(217, 4, 41, 0.25);
+    }
+
+/* Alt Telif Alaný (Ýnce Bant) */
+.footer-bottom {
+    border-top: 1px solid var(--border-color);
+    padding: 1.2rem 0; /* Yükseklik azaldý */
+    margin-top: 2.5rem; /* Footer gövdesiyle arasý kapandý */
+    background: rgba(0,0,0,0.2);
+}
+
+.copyright-text {
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    opacity: 0.8;
+}

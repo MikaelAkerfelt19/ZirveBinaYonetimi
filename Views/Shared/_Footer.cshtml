@@ -1,71 +1,76 @@
-﻿<footer style="background-color: #020203; border-top: 1px solid var(--border-color); padding-top: 80px; margin-top: auto;">
+﻿<footer class="site-footer">
     <div class="container">
-        <div class="row g-5 pb-5">
-
+        <div class="row g-4">
             <div class="col-lg-4 col-md-6">
-                <a asp-controller="Home" asp-action="Index" class="d-flex align-items-center mb-4 text-decoration-none">
-                    <img src="~/img/logo.png" alt="Zirve Logo" style="height: 50px; filter: brightness(0) invert(1);">
+                <a asp-controller="Home" asp-action="Index" class="d-inline-block mb-3">
+                    <img src="~/img/logo.png" alt="Zirve Bina Yönetimi" height="60" style="filter;">
                 </a>
-                <p class="text-muted mb-4" style="line-height: 1.8;">
-                    Zirve Bina Yönetimi, yaşam alanlarınıza değer katan, şeffaf, güvenilir ve teknolojik çözümler sunan yeni nesil yönetim platformudur.
+                <p class="text mb-3 pe-lg-4" style="line-height: 1.6; font-size: 0.9rem;">
+                    Zirve Bina Yönetimi; şeffaflık, teknoloji ve güven ilkeleriyle yaşam alanlarınıza değer katan yeni nesil çözüm ortağınızdır.
                 </p>
-                <div class="d-flex gap-3">
-                    <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
-                    <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="#" class="social-icon"><i class="fab fa-whatsapp"></i></a>
+                <div class="d-flex gap-2">
+                    <a href="#" class="social-icon" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-icon" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-icon" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="social-icon" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
                 </div>
             </div>
 
             <div class="col-lg-2 col-md-6">
-                <h5 class="text-white mb-4">Kurumsal</h5>
-                <ul class="list-unstyled footer-links">
+                <h5 class="footer-heading">Kurumsal</h5>
+                <ul class="footer-links">
                     <li><a asp-controller="Home" asp-action="Corporate">Hakkımızda</a></li>
                     <li><a asp-controller="Home" asp-action="Process">Yönetim Süreci</a></li>
                     <li><a asp-controller="Home" asp-action="References">Referanslar</a></li>
                     <li><a href="#">Kariyer</a></li>
-                    <li><a href="#">KVKK Aydınlatma</a></li>
+                    <li><a href="#">KVKK & Gizlilik</a></li>
                 </ul>
             </div>
 
             <div class="col-lg-2 col-md-6">
-                <h5 class="text-white mb-4">Hizmetler</h5>
-                <ul class="list-unstyled footer-links">
+                <h5 class="footer-heading">Hizmetlerimiz</h5>
+                <ul class="footer-links">
                     <li><a asp-controller="Home" asp-action="Services">Finansal Yönetim</a></li>
                     <li><a asp-controller="Home" asp-action="Services">Hukuki Danışmanlık</a></li>
                     <li><a asp-controller="Home" asp-action="Services">Teknik Bakım</a></li>
                     <li><a asp-controller="Home" asp-action="Services">Temizlik & Güvenlik</a></li>
-                    <li><a asp-controller="Home" asp-action="Services">Mobil Uygulama</a></li>
+                    <li><a asp-controller="Home" asp-action="Services">Zirve Mobil App</a></li>
                 </ul>
             </div>
 
             <div class="col-lg-4 col-md-6">
-                <h5 class="text-white mb-4">Bize Ulaşın</h5>
-                <ul class="list-unstyled text-muted footer-contact">
-                    <li class="mb-3 d-flex gap-3">
-                        <i class="fas fa-map-marker-alt text-danger mt-1"></i>
+                <h5 class="footer-heading">Bize Ulaşın</h5>
+                <ul class="footer-contact">
+                    <li>
+                        <i class="fas fa-map-marker-alt"></i>
                         <span>Maslak Mah. Büyükdere Cad. No:123<br>Sarıyer / İstanbul</span>
                     </li>
-                    <li class="mb-3 d-flex gap-3">
-                        <i class="fas fa-phone-alt text-danger mt-1"></i>
+                    <li>
+                        <i class="fas fa-phone-alt"></i>
                         <span>+90 (212) 345 67 89</span>
                     </li>
-                    <li class="mb-3 d-flex gap-3">
-                        <i class="fas fa-envelope text-danger mt-1"></i>
+                    <li>
+                        <i class="fas fa-envelope"></i>
                         <span>info@zirveyonetim.com.tr</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-clock"></i>
+                        <span>Pzt - Cum: 09:00 - 18:00</span>
                     </li>
                 </ul>
             </div>
 
         </div>
+    </div>
 
-        <div class="py-4 border-top border-secondary border-opacity-10 d-flex flex-column flex-md-row justify-content-between align-items-center">
-            <small class="text-muted mb-2 mb-md-0">
-                &copy; @DateTime.Now.Year Zirve Bina Yönetim Sistemleri A.Ş. Tüm hakları saklıdır.
-            </small>
-            <small class="text-muted">
-                Designed by <span class="text-white">Zirve Tech Team</span>
-            </small>
+    <div class="footer-bottom">
+        <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center gap-2">
+            <span class="copyright-text">
+                &copy; @DateTime.Now.Year <strong>Zirve Bina Yönetim A.Ş.</strong>
+            </span>
+            <span class="copyright-text">
+                Designed by <span style="color: #fff; font-weight: 600;">Seasoft</span>
+            </span>
         </div>
     </div>
 </footer>
